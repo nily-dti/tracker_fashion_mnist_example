@@ -1,0 +1,7 @@
+experiments: []
+remotes:
+  dti-ai-1:
+    description: Single-GPU; GTX1080Ti 11GB
+    host: 10.44.60.128
+    type: ssh
+    user: dti
