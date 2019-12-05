@@ -1,7 +1,11 @@
-experiments: []
+experiments:
+  cnn: experiments/cnn.yaml
+  pytorch-mnist: experiments/pytorch_mnist.yaml
+  pytorch-cnn: experiments/pytorch_cnn_root.yaml
 remotes:
-  dti-ai-1:
+  dti-ai-1-fashion:
     description: Single-GPU; GTX1080Ti 11GB
     host: 10.44.60.128
     type: ssh
     user: dti
+    private-key: ~/.ssh/id_rsa.pub

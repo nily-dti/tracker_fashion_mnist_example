@@ -1,0 +1,30 @@
+- experiment: cnn
+  description: Using Tracker to do good science!
+  operations:
+    train:
+      parameters:
+        seed:
+          description: Preset number (or list of numbers) to set for pseudo-random number generators
+          value: 42
+        dropout:
+          description: Probability of dropping nodes in the neural net (dropout rate, NOT keep probability)
+          min: 0.0
+          max: 1.0
+          value: 0.2
+        batch_size:
+          description: Number of images pr. batch
+          value: 64
+        lr:
+          description: Learning rate
+          min: 1e-4
+          max: 0.1
+          value: 0.01
+        epochs:
+          value: 5
+        lr_decay:
+          value: 0.0
+      environments:
+        - name: tf
+          type: docker
+          image: tensorflow/tensorflow:2.0.0-gpu-py3
+          executable: src/train.py

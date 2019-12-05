@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  tf:
+    #image: tensorflow/tensorflow:2.0.0-gpu-py3
+    image: tensorflow/tensorflow:2.0.0-py3
+    command: python3 -u -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+    # command: nvidia-smi
+    #command: >
+    #  python3 /src/train.py
+    #      --seed 42
+    #      --batch_size 128
+    #      --epochs 5
+    #      --dropout 0.2
+    #      --lr 0.01
+    #      --lr_decay 0.0
+    #volumes:
+    #  - type: bind
+    #    source: ./src
+    #    target: /src/
+
+#volumes:
+#  src:
